@@ -1,1 +1,183 @@
-/* You can add global styles to this file, and also import other style files */
+@import '~bootstrap/scss/bootstrap';
+
+$color-gold: #DD9F31;
+$color-red: #E10A19;
+$color-black: #000000;
+$color-white: #ffffff;
+
+body {
+    background-color: $color-black;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+    color: unset;
+    &:hover{
+        color: unset;
+    }
+}
+
+.bg-header {
+    background: url('./assets/background-header.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.text-gold {
+    color: $color-gold;
+}
+
+.logo-rounded-header {
+    bottom: -30px;
+    z-index: 1;
+}
+
+nav button:focus + .sidebar {
+    display: block !important;
+}
+nav {
+    z-index: 2;
+    .sidebar {
+        height: 100vh;
+        width: 60vw;
+        transform: translateX(-100%);
+        animation: slide .3s ease-out forwards;
+    }
+}
+
+.border-gold {
+    border-color: $color-gold !important;
+}
+
+.border-red {
+    border-color: $color-red !important;
+}
+
+.menu {
+    width: 300px ;
+    height: 400px;
+    &.menu-dia{
+        background: url("./assets/dia-a-dia.png");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    
+    &.menu-kits{
+        background: url("./assets/kits.png");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    &.menu-premium{
+        background: url("./assets/premium.png");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+}
+
+.divider::before {
+    content: '';
+    position: absolute;
+    width: 6px;
+    height: 8px;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background-color: $color-red;
+}
+.divider::after {
+    content: '';
+    position: absolute;
+    width: 50%;
+    height: 1px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: $color-red;
+}
+
+.benefits::after {
+    content: '';
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: $color-red;
+}
+
+.app span {
+    font-size: 12px;
+}
+
+.bg-boutique {
+    background: url('./assets/boutique.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.btn-red {
+    background-color: rgba($color-red, 0.6);
+    border: 0 !important;
+
+    &.btn-active{
+        background-color: $color-red !important;
+    }
+
+    &:focus, &:hover, &:active {
+        background-color: $color-red !important;
+    }
+}
+
+.btn-gold {
+    background-color: $color-gold;
+    border: 0 !important;
+
+    &:focus, &:hover, &:active {
+        background-color: rgba($color-gold, 0.6) !important;
+    }
+}
+
+.bg-red {
+    background-color: $color-red;
+}
+
+.gmap_canvas {
+    overflow: hidden;
+    background: none !important;
+
+}
+
+@keyframes slide {
+   100% {
+    transform: translateX(0);
+   } 
+}
+
+@media (max-width: 500px) {
+    .text-header {
+        h1 {
+            font-size: xx-large;
+        }
+
+        h4 {
+            font-size: medium;
+        }
+    }
+
+    .logo-rounded-header {
+        max-width: 120px;
+    }
+}
