@@ -9,7 +9,7 @@ import { MeatsDto } from '../dtos/meats.dto';
 })
 export class ApiService {
 
-  url: string = environment.api;
+  url: string = 'http://44.208.162.156:3000'
 
   constructor(private http: HttpClient) { }
 
