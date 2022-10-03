@@ -1,0 +1,31 @@
+<nav class="position-fixed">
+    <button class="ms-4 bg-transparent border-0 p-0 mt-4">
+        <img width="30" src="../assets/icons/menu.svg" alt="MenuRounded.svg">
+    </button>
+    <div class="sidebar bg-black position-absolute top-0" [ngClass]="scrolled ? 'bg-black' : 'bg-transparent'">
+        <ul class="text-white text-center fs-4 w-100">
+            <li>
+                <a routerLink="/">
+                    <img class="mb-4 mt-4 img-fluid" src="../assets/logo-header.svg" alt="logo-header.svg">
+                </a>
+            </li>
+            <li class="mb-4 mt-4">
+                <a routerLink="/sobre">SOBRE NÓS</a>
+            </li>
+            <li class="mb-4 mt-4">
+                <a href="#location">UNIDADES</a>
+            </li>
+            <li class="mb-4 mt-4">
+                <a routerLink='/cardapio'>CARDÁPIO</a>
+            </li>
+            <li class="mb-4 mt-4 text-gold">
+                <a href="#app">APLICATIVO</a>
+            </li>
+            <li class="mb-4 mt-4 ">
+                <a target="_blank" href="https://api.whatsapp.com/send?phone=5561999822472">
+                    <i class="fa-brands fa-whatsapp"></i>
+                </a>
+            </li>
+        </ul>
+    </div>
+</nav>

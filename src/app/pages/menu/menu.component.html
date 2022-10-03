@@ -1,0 +1,83 @@
+<section class="bg-header2 clip-path-header pb-5 pt-5">
+    <div class="pb-5 pt-5 d-flex justify-content-center">
+        <div class="text-header text-center pt-5 pb-5">
+            <h1 class="text-white m-0 display-3 pt-5 pb-5 fw-bold">CARDÁPIO THIAGO'S PRIME</h1>
+        </div>
+    </div>
+</section>
+
+<section class="container mt-5 mb-5">
+    <div class="row">
+        <div class="col-md-4 mt-5 d-flex justify-content-center">
+            <a (click)="scrollTo('premium')" class="btn btn-outline-gold w-100 text-white ps-5 pe-5 fs-1">PREMIUM</a>
+        </div>
+        <div class="col-md-4 mt-5 d-flex justify-content-center">
+            <a (click)="scrollTo('kits')" class="btn btn-outline-gold w-100 text-white ps-5 pe-5 fs-1">KITS</a>
+        </div>
+        <div class="col-md-4 mt-5 d-flex justify-content-center">
+            <a (click)="scrollTo('diadia')" class="btn btn-outline-gold w-100 text-white ps-5 pe-5 fs-1">DIA A DIA</a>
+        </div>
+    </div>
+</section>
+
+
+<!-- KITS  -->
+<section class="container mt-5 pt-5" id="kits">
+    <h2 class="display-5 text-center text-white mt-5 pt-5">CONHEÇA NOSSOS KITS</h2>
+    <div class="divider w-100 position-relative"></div>
+
+    <div class="row mt-5 d-flex justify-content-center">
+        <div class="col-md-4 mt-5" *ngFor="let kit of kits">
+            <div class="d-flex flex-column justify-content-center align-items-center">
+                <a href="https://api.whatsapp.com/send?phone=5561999822472" target="_blank"
+                    class="link-meat position-relative">
+                    <img class="img-fluid" [src]="kit.image" alt="kit.png">
+                    <p class="text-center text-white fs-3">{{ kit.name }}</p>
+                    <p class="text-center text-white">R$ {{ kit.price.length != 2 ? kit.price : kit.price + ',00' }}</p>
+                </a>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<!-- PREMIUM  -->
+<section class="container mt-5 pt-5" id="premium">
+    <h2 class="display-5 text-center text-white mt-5 pt-5">CARNES PREMIUM</h2>
+    <div class="divider w-100 position-relative"></div>
+
+    <div class="row mt-5 d-flex justify-content-center">
+        <div class="col-md-4 mt-5" *ngFor="let premium of premiums">
+            <div class="d-flex flex-column justify-content-center align-items-center">
+                <a href="https://api.whatsapp.com/send?phone=5561999822472" target="_blank"
+                    class="link-meat position-relative">
+                    <img class="img-fluid" [src]="premium.image" alt="premium.png">
+                    <p class="text-center text-white fs-3">{{ premium.name }}</p>
+                    <p class="text-center text-white">R$ {{ premium.price.length != 2 ? premium.price : premium.price +
+                        ',00' }}</p>
+                </a>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<!-- DIA A DIA  -->
+<section class="container mt-5 pt-5" id="diadia">
+    <h2 class="display-5 text-center text-white mt-5 pt-5">CARNES DO DIA A DIA</h2>
+    <div class="divider w-100 position-relative"></div>
+
+    <div class="row mt-5 d-flex justify-content-center">
+        <div class="col-md-4 mt-5" *ngFor="let dia of diadia">
+            <div class="d-flex flex-column justify-content-center align-items-center">
+                <a href="https://api.whatsapp.com/send?phone=5561999822472" target="_blank"
+                    class="link-meat position-relative">
+                    <img class="img-fluid" [src]="dia.image" alt="dia-dia.png">
+                    <p class="text-center text-white fs-3">{{ dia.name }}</p>
+                    <p class="text-center text-white">R$ {{ dia.price.length != 2 ? dia.price : dia.price + ',00' }}</p>
+                </a>
+            </div>
+        </div>
+
+    </div>
+</section>

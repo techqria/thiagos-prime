@@ -1,0 +1,43 @@
+<section class="container mt-3 mb-3 d-flex flex-column justify-content-center align-items-center text-white">
+    <form class="form-group" [formGroup]="form" (ngSubmit)="registerProduct()">
+        <h1 class="mb-3 p-0">Cadastrar novo produto</h1>
+        <div class="mb-3">
+            <label class="form-label">Nome do produto</label>
+            <input formControlName="name" type="text" class="form-control text-white bg-black" placeholder="Ex: Acém">
+        </div>
+        <div class="mb-3">
+            <label class="form-label">Preço</label>
+            <input formControlName="price" type="text" class="form-control text-white bg-black" placeholder="Ex: 28,90">
+        </div>
+        <div class="mb-3">
+            <label class="form-label">Quantidade</label>
+            <select class="form-select text-white bg-black" formControlName="quantity" >
+                <option value="500g">500g</option>
+                <option value="kg">kg</option>
+                <option value="pct">pct</option>
+                <option value="400g">400g</option>
+            </select>
+        </div>
+        <div class="mb-3">
+            <label class="form-label">Categoria</label>
+            <select class="form-select text-white bg-black" formControlName="category" >
+                <option value="dia-dia">Dia a dia</option>
+                <option value="premium">Premium</option>
+                <option value="kits">Kits</option>
+            </select>
+        </div>
+        <div class="mb-3">
+            <label class="form-label">Imagem</label>
+            <input formControlName="image" class="form-control bg-black text-white" type="file">
+        </div>
+        <div class="mb-3">
+            <label class="form-label">Descrição</label>
+            <input formControlName="description" type="text" class="form-control text-white bg-black" placeholder="Ex: 500g de carne acompanhados de 40g de queijo">
+        </div>
+        <button class="btn btn-outline-gold text-white form-control" type="submit">CADASTRAR PRODUTO</button>
+    </form>
+</section>
+
+<div class="myModal position-absolute top-20 right-40 bg-transparent text-danger border border-danger" [ngClass]="validForm ? 'd-none' : 'd-block'">
+    <h4 class="p-2">Por favor, preencha <br> todos os campos!</h4>
+</div>

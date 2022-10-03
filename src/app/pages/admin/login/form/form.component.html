@@ -1,0 +1,19 @@
+<section class="container d-flex justify-content-center align-items-center">
+    <div class="text-white">
+        <!-- <img class="img-fluid" src="../../../../../assets/logo-header.svg" alt="logo-header.svg"> -->
+        <form class="form-group" [formGroup]="form" (ngSubmit)="login()">
+            <div class="mt-3">
+                <label class="form-label">Usuário</label>
+                <input class="form-control" formControlName="username" id="username"  placeholder="Insira seu usuário" type="text">
+            </div>
+            <div class="mt-3">
+                <label class="form-label">Senha</label>
+                <input class="form-control" formControlName="password" id="password"  placeholder="Insira sua senha" type="password">
+            </div>
+            <p class="mt-2" [ngClass]="validForm ? 'text-transparent' : 'text-danger'">Usuário ou senha inválidos</p>
+            <div class="mt-3">
+                <button class="btn btn-outline-danger text-white w-100" type="submit">ENTRAR</button>
+            </div>
+        </form>
+    </div>
+</section>
