@@ -9,7 +9,7 @@ import { MeatsDto } from '../dtos/meats.dto';
 })
 export class ApiService {
 
-  url: string = 'https://thiagos-api.herokuapp.com/'
+  url: string = 'https://thiagos-api.herokuapp.com'
 
   constructor(private http: HttpClient) { }
 
