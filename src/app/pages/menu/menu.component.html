@@ -32,7 +32,7 @@
                 <a href="https://api.whatsapp.com/send?phone=5561999822472" target="_blank"
                     class="link-meat position-relative">
                     <img class="img-fluid" [src]="kit.image" alt="kit.png">
-                    <p class="text-center text-white fs-3">{{ kit.name }}</p>
+                    <p class="text-center text-white fs-3 text-capitalize">{{ kit.name }}</p>
                     <p class="text-center text-white">R$ {{ kit.price.length != 2 ? kit.price : kit.price + ',00' }}</p>
                 </a>
             </div>
@@ -52,7 +52,7 @@
                 <a href="https://api.whatsapp.com/send?phone=5561999822472" target="_blank"
                     class="link-meat position-relative d-flex flex-column align-items-center">
                     <img class="img-fluid" [src]="premium.image" alt="premium.png">
-                    <p class="text-center text-white fs-3">{{ premium.name }}</p>
+                    <p class="text-center text-white fs-3 text-capitalize">{{ premium.name }}</p>
                     <p class="text-center text-white">R$ {{ premium.price.length != 2 ? premium.price : premium.price +
                         ',00' }}</p>
                 </a>
@@ -73,7 +73,7 @@
                 <a href="https://api.whatsapp.com/send?phone=5561999822472" target="_blank"
                     class="link-meat position-relative">
                     <img class="img-fluid" [src]="dia.image" alt="dia-dia.png">
-                    <p class="text-center text-white fs-3">{{ dia.name }}</p>
+                    <p class="text-center text-white fs-3 text-capitalize">{{ dia.name }}</p>
                     <p class="text-center text-white">R$ {{ dia.price.length != 2 ? dia.price : dia.price + ',00' }}</p>
                 </a>
             </div>

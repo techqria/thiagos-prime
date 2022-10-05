@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, ElementRef, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-main',
@@ -10,10 +10,10 @@ export class MainComponent implements OnInit {
   location = {
     city: 'vicente',
     adress: 'Quadra 1 Conjunto 7 Lote 25 Setor Leste',
-    phone: '(61) 3465-4745'
+    phone: '(61) 3465-4745',
   };
 
-  constructor() { }
+  constructor(private hostElement: ElementRef) { }
 
   ngOnInit(): void {
   }
