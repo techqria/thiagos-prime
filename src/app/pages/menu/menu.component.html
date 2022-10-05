@@ -50,7 +50,7 @@
         <div class="col-md-4 mt-5" *ngFor="let premium of premiums">
             <div class="d-flex flex-column justify-content-center align-items-center">
                 <a href="https://api.whatsapp.com/send?phone=5561999822472" target="_blank"
-                    class="link-meat position-relative">
+                    class="link-meat position-relative d-flex flex-column align-items-center">
                     <img class="img-fluid" [src]="premium.image" alt="premium.png">
                     <p class="text-center text-white fs-3">{{ premium.name }}</p>
                     <p class="text-center text-white">R$ {{ premium.price.length != 2 ? premium.price : premium.price +

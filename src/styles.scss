@@ -83,25 +83,31 @@ nav {
     width: 350px;
     height: 450px;
 
+    transition: .8s ease;
+
     &.menu-dia {
         background: url("./assets/images/dia-a-dia.png");
         background-position: center;
         background-repeat: no-repeat;
-        background-size: cover;
+        background-size: auto;
     }
 
     &.menu-kits {
         background: url("./assets/images/kits.png");
         background-position: center;
         background-repeat: no-repeat;
-        background-size: cover;
+        background-size: auto;
     }
 
     &.menu-premium {
         background: url("./assets/images/premium.png");
         background-position: center;
         background-repeat: no-repeat;
-        background-size: cover;
+        background-size: auto;
+    }
+
+    &:hover {
+        transform: scale(1.06);
     }
 
 }
@@ -340,6 +346,13 @@ nav {
             ul {
                 display: flex !important;
                 justify-content: space-around;
+
+                li {
+                    transition: .3s ease-in;
+                    &:hover {
+                        transform: scale(1.1);
+                    }
+                }
 
                 img {
                     margin: 0 !important;
