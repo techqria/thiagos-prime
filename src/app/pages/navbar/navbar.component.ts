@@ -15,8 +15,6 @@ export class NavbarComponent implements OnInit {
   ngOnInit(): void {
     this.checkScroll()
 
-    window.addEventListener('click', this.showSidebar())
-
     window.addEventListener('scroll', () => {
       this.checkScroll()
     })
@@ -31,7 +29,6 @@ export class NavbarComponent implements OnInit {
   showSidebar() {
     if (this.sidebar) {
       this.sidebar = false;
-      document.getElementById('sidebar')?.blur()
     } else {
       this.sidebar = true;
     }
