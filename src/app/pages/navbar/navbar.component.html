@@ -2,7 +2,7 @@
     <button (blur)="showSidebar()" (click)="showSidebar()" tabindex="0" class="ms-4 bg-transparent border-0 p-0 mt-4">
         <img width="30" src="../assets/icons/menu.svg" alt="MenuRounded.svg">
     </button>
-    <div id="sidebar" class="sidebar bg-black position-absolute top-0" [ngClass]="scrolled ? 'bg-black' : 'bg-transparent'" [ngClass]="sidebar ? 'translate' : ''">
+    <div id="sidebar" tabindex="0" class="sidebar bg-black position-absolute top-0" [ngClass]="scrolled ? 'bg-black' : 'bg-transparent'" [ngClass]="sidebar ? 'translate' : ''">
         <ul class="text-white text-center fs-4 w-100">
             <li>
                 <a href="#header">
