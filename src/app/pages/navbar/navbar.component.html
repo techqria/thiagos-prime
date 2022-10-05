@@ -1,8 +1,8 @@
 <nav class="position-fixed">
-    <button class="ms-4 bg-transparent border-0 p-0 mt-4">
+    <button (blur)="showSidebar()" (click)="showSidebar()" class="ms-4 bg-transparent border-0 p-0 mt-4">
         <img width="30" src="../assets/icons/menu.svg" alt="MenuRounded.svg">
     </button>
-    <div class="sidebar bg-black position-absolute top-0" [ngClass]="scrolled ? 'bg-black' : 'bg-transparent'">
+    <div class="sidebar bg-black position-absolute top-0" [ngClass]="scrolled ? 'bg-black' : 'bg-transparent'" [ngClass]="sidebar ? 'translate' : ''">
         <ul class="text-white text-center fs-4 w-100">
             <li>
                 <a href="#header">

@@ -47,8 +47,12 @@ a {
     z-index: 1;
 }
 
-nav button:focus-visible +.sidebar {
+nav button:focus +.sidebar {
     transform: translateX(0);
+}
+
+.translate {
+    transform: translateX(0) !important;
 }
 
 nav {

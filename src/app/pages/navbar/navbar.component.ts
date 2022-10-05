@@ -6,6 +6,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NavbarComponent implements OnInit {
 
+  sidebar: boolean = false;
 
   scrolled: boolean = true;
 
@@ -22,6 +23,14 @@ export class NavbarComponent implements OnInit {
   checkScroll() {
     if (screen.availWidth > 992) {
       window.scrollY > 0 ? this.scrolled = true : this.scrolled = false
+    }
+  }
+
+  showSidebar() {
+    if (this.sidebar) {
+      this.sidebar = false;
+    } else {
+      this.sidebar = true;
     }
   }
 }
