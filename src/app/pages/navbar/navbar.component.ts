@@ -29,6 +29,7 @@ export class NavbarComponent implements OnInit {
   showSidebar() {
     if (this.sidebar) {
       this.sidebar = false;
+      document.getElementById('sidebar')?.blur()
     } else {
       this.sidebar = true;
     }
