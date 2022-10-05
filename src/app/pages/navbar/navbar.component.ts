@@ -15,7 +15,7 @@ export class NavbarComponent implements OnInit {
   ngOnInit(): void {
     this.checkScroll()
 
-    window.addEventListener('click', this.showSidebar)
+    window.addEventListener('click', this.showSidebar())
 
     window.addEventListener('scroll', () => {
       this.checkScroll()

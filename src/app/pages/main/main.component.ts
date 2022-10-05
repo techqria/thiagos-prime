@@ -13,7 +13,7 @@ export class MainComponent implements OnInit {
     phone: '(61) 3465-4745',
   };
 
-  constructor(private hostElement: ElementRef) { }
+  constructor() { }
 
   ngOnInit(): void {
   }
