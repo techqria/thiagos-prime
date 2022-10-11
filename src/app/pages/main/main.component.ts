@@ -9,8 +9,8 @@ export class MainComponent implements OnInit {
 
   location = {
     city: 'vicente',
-    adress: 'Quadra 1 Conjunto 7 Lote 25 Setor Leste',
-    phone: '(61) 3465-4745',
+    adress: 'Rua 04 A, Loja 01, Chácara 01, A Lote 06 - Vicente Pires DF',
+    phone: '(61) 99982-2472',
   };
 
   constructor() { }
@@ -20,11 +20,11 @@ export class MainComponent implements OnInit {
 
   changeLocation(city: string) {
     if (city === 'vicente') {
-      this.location.adress = 'Quadra 1 Conjunto 7 Lote 25 Setor Leste';
-      this.location.phone = '(61) 3465-4745';
+      this.location.adress = 'Rua 04 A, Loja 01, Chácara 01, A Lote 06 - Vicente Pires DF';
+      this.location.phone = '(61) 99982-2472';
       this.location.city = 'vicente';
     } else {
-      this.location.adress = 'QNM 42 Conjunto A2 Lote 62';
+      this.location.adress = 'Qnm 42 Conjunto A2 - Tag. Norte';
       this.location.phone = '(61) 3491-0867';
       this.location.city = 'taguatinga';
     }
