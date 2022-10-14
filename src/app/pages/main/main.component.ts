@@ -1,4 +1,5 @@
 import { Component, ElementRef, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-main',
@@ -13,7 +14,11 @@ export class MainComponent implements OnInit {
     phone: '(61) 99982-2472',
   };
 
-  constructor() { }
+  constructor(private route: Router) {
+    if (this.route.getCurrentNavigation()?.extras.state) {
+      this.scrollTo(this.route.getCurrentNavigation()?.extras.state)
+    }
+  }
 
   ngOnInit(): void {
   }
@@ -28,5 +33,11 @@ export class MainComponent implements OnInit {
       this.location.phone = '(61) 3491-0867';
       this.location.city = 'taguatinga';
     }
+  }
+
+  scrollTo(section: any) {
+    setTimeout(() => {
+      document.getElementById(section.section)?.scrollIntoView();
+    }, 100)
   }
 }

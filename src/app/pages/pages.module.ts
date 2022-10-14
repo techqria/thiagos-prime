@@ -11,6 +11,9 @@ import { AdminComponent } from './admin/admin/admin.component';
 import { CheckLoginComponent } from './admin/login/check-login/check-login.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { RegisterProductComponent } from './admin/register-product/register-product.component';
+import { AboutComponent } from './about/about.component';
+import { FooterComponent } from './footer/footer.component';
+import { BoutiqueComponent } from './boutique/boutique.component';
 
 
 @NgModule({
@@ -23,6 +26,9 @@ import { RegisterProductComponent } from './admin/register-product/register-prod
     AdminComponent,
     CheckLoginComponent,
     RegisterProductComponent,
+    AboutComponent,
+    FooterComponent,
+    BoutiqueComponent,
   ],
   imports: [
     CommonModule,

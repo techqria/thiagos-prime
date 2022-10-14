@@ -5,24 +5,24 @@
     <div id="sidebar" tabindex="0" class="sidebar bg-black position-absolute top-0" [ngClass]="scrolled ? 'bg-black' : 'bg-transparent'" [ngClass]="sidebar ? 'translate' : ''">
         <ul class="text-white text-center fs-4 w-100">
             <li>
-                <a href="#header">
+                <a href="#">
                     <img class="mb-4 mt-4 img-fluid" src="../assets/logo-header.svg" alt="logo-header.svg">
                 </a>
             </li>
              <li class="mb-4 mt-4">
-                <a class="fs-5 fw-bold" routerLink="/sobre">SOBRE NÓS</a>
+                <a class="fs-5 fw-bold" routerLink="/sobre-nos">QUEM SOMOS?</a>
             </li>
             <li class="mb-4 mt-4">
                 <a class="fs-5 fw-bold" routerLink='/cardapio'>CARDÁPIO</a>
             </li>
            <li class="mb-4 mt-4">
-                <a class="fs-5 fw-bold" href="#location">UNIDADES</a>
+                <a class="fs-5 fw-bold" (click)="scrollTo('location')">UNIDADES</a>
             </li>
             <li class="mb-4 mt-4 text-gold">
-                <a class="fs-5 fw-bold" href="#app">APLICATIVO</a>
+                <a class="fs-5 fw-bold" (click)="scrollTo('app')">APLICATIVO</a>
             </li>
-            <li class="mb-4 mt-4 ">
-                <a class="fs-5 fw-bold" target="_blank" href="https://api.whatsapp.com/send?phone=5561999822472">
+            <li class="mb-4 mt-3">
+                <a class="fs-1 fw-bold whats" target="_blank" href="https://api.whatsapp.com/send?phone=5561999822472">
                     <i class="fa-brands fa-whatsapp"></i>
                 </a>
             </li>

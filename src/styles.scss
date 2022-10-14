@@ -5,6 +5,17 @@ $color-red: #E10A19;
 $color-black: #000000;
 $color-white: #ffffff;
 
+::-webkit-scrollbar {
+    background-color: $color-black;
+    width: 2px;
+    overflow: overlay;
+}
+
+::-webkit-scrollbar-thumb {
+    border-radius: 30px;
+    background-color: $color-gold;
+}
+
 body {
     background-color: $color-black;
 }
@@ -18,10 +29,19 @@ ul {
 a {
     text-decoration: none;
     color: unset;
+    cursor: pointer;
 
     &:hover {
         color: unset;
     }
+}
+
+.me-m5 {
+    margin-right: 5rem !important;
+}
+
+.ms-m5 {
+    margin-left: 5rem !important;
 }
 
 .bg-header {
@@ -47,13 +67,29 @@ a {
     z-index: 1;
 }
 
+.kits {
+    transition: .4s ease;
 
-nav button:focus +.sidebar {
+    &:hover {
+
+    }
+}
+
+.whats {
+    filter: drop-shadow(0 0 10px $color-gold);
+}
+
+nav button:focus+.sidebar {
     transform: translateX(0);
 }
 
 .translate {
     transform: translateX(0) !important;
+}
+
+.boutique {
+    max-width: 200px !important;
+    max-height: 300px !important;
 }
 
 nav {
@@ -66,6 +102,10 @@ nav {
         transition: .3s ease-in-out;
         opacity: 80%;
 
+        &:focus-visible {
+            border: none !important;
+        }
+
         ul {
             letter-spacing: 1px;
 
@@ -77,11 +117,11 @@ nav {
 }
 
 .border-gold {
-    border-color: $color-gold  !important;
+    border-color: $color-gold !important;
 }
 
 .border-red {
-    border-color: $color-red  !important;
+    border-color: $color-red !important;
 }
 
 .menu {
@@ -156,33 +196,11 @@ nav {
 
 .link-meat {
 
-    img,
-    p {
-        transition: .8s ease;
-    }
+    transition: .4s ease;
 
-
-    &:hover {
-        &::before {
-            content: 'COMPRAR';
-            position: absolute;
-            border: 1px solid $color-red;
-            color: white;
-            font-size: 30px;
-            font-weight: bold;
-            padding: 20px;
-            top: 30%;
-            left: 50%;
-            opacity: 100%;
-            transform: translate(-50%, -30%);
-        }
-
-        img,
-        p {
-            opacity: 50%;
-        }
-
-    }
+   &:hover {
+    transform: scale(1.1);
+   }
 }
 
 .app span {
@@ -201,13 +219,13 @@ nav {
     border: 0 !important;
 
     &.btn-active {
-        background-color: $color-red  !important;
+        background-color: $color-red !important;
     }
 
     &:focus,
     &:hover,
     &:active {
-        background-color: $color-red  !important;
+        background-color: $color-red !important;
     }
 }
 
@@ -225,7 +243,7 @@ nav {
 
 .btn-outline-gold {
     background-color: transparent;
-    border: 1px solid $color-gold  !important;
+    border: 1px solid $color-gold !important;
 
     &:focus,
     &:hover,
@@ -257,7 +275,7 @@ nav {
 }
 
 .myModal {
-    animation: myModal 20s ease ;
+    animation: myModal 20s ease;
 }
 
 .top-20 {
@@ -362,6 +380,7 @@ nav {
 
                 li {
                     transition: .3s ease-in;
+
                     &:hover {
                         transform: scale(1.1);
                     }

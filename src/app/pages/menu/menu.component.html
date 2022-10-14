@@ -30,8 +30,9 @@
         <div class="col-md-4 mt-5" *ngFor="let kit of kits">
             <div class="d-flex flex-column justify-content-center align-items-center">
                 <a href="https://api.whatsapp.com/send?phone=5561999822472" target="_blank"
-                    class="link-meat position-relative d-flex flex-column align-items-cente">
+                    class="link-meat kits position-relative d-flex flex-column align-items-cente">
                     <img class="img-fluid" [src]="kit.image" alt="kit.png">
+                    <!-- <p class="text-center text-white fs-3 text-capitalize">{{ kit.description }}</p> -->
                     <p class="text-center text-white fs-3 text-capitalize">{{ kit.name }}</p>
                     <p class="text-center text-white fw-bold mb-1 ls fs-4 bg-gold">R$ {{ kit.price.length != 2 ? kit.price :
                         kit.price + ',00' }}</p>
@@ -87,3 +88,4 @@
 
     </div>
 </section>
+

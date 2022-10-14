@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-navbar',
@@ -10,7 +11,7 @@ export class NavbarComponent implements OnInit {
 
   scrolled: boolean = true;
 
-  constructor() { }
+  constructor(private router: Router) { }
 
   ngOnInit(): void {
     this.checkScroll()
@@ -31,6 +32,19 @@ export class NavbarComponent implements OnInit {
       this.sidebar = false;
     } else {
       this.sidebar = true;
+    }
+  }
+
+  scrollTo(section: string) {
+    if (this.router.url == '/') {
+        document.getElementById(section)?.scrollIntoView()
+    } else {
+      this.router.navigate(['/'],
+        {
+          state: {
+            section: section
+          }
+        });
     }
   }
 

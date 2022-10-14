@@ -1,4 +1,4 @@
-<section  class="bg-header position-relative pb-5 pt-5 mb-5" id="header">
+<section class="bg-header position-relative pb-5 pt-5 mb-5" id="header">
     <div class="pb-5 pt-5 d-flex justify-content-center mb-2">
         <div class="text-header text-center pt-5 pb-5">
             <h4 class="text-white m-0 fw-bold pt-5">A MAIOR VARIEDADE DE</h4>
@@ -9,9 +9,9 @@
     </div>
 </section>
 
-<section class="container-fluid mt-5 mb-5 pt-5 pb-5">
-    <div class="row text-center fw-bold d-flex justify-content-center">
-        <div class="col-md-6 col-lg-4 mt-4 d-flex justify-content-center">
+<section class="container mt-5 mb-5 pt-5 pb-5">
+    <div class="text-center d-none fw-bold d-md-flex flex-row justify-content-center gap-5">
+        <div class="d-flex mt-4 d-flex justify-content-center">
             <a routerLink="/cardapio">
                 <div
                     class="d-flex align-items-center justify-content-center menu menu-dia rounded border border-gold text-white">
@@ -22,7 +22,7 @@
                 </div>
             </a>
         </div>
-        <div class="col-md-6 col-lg-4 mt-4 d-flex justify-content-center">
+        <div class="d-flex mt-4 d-flex justify-content-center">
             <a routerLink="/cardapio">
                 <div
                     class="d-flex align-items-center justify-content-center menu menu-kits rounded border border-gold text-white">
@@ -33,7 +33,42 @@
                 </div>
             </a>
         </div>
-        <div class="col-md-6 col-lg-4 mt-4 d-flex justify-content-center">
+        <div class="d-flex mt-4 d-flex justify-content-center">
+            <a routerLink="/cardapio">
+                <div
+                    class="d-flex align-items-center justify-content-center menu menu-premium rounded border border-gold text-white">
+                    <div class="d-block">
+                        <span>CARNES </span>
+                        <h2 class="display-2 fw-bold">PREMIUM</h2>
+                    </div>
+                </div>
+            </a>
+        </div>
+    </div>
+    <div class="row text-center d-flex fw-bold d-md-none justify-content-center ">
+        <div class="col-md-6 col-lg-4 d-flex mt-4 d-flex justify-content-center">
+            <a routerLink="/cardapio">
+                <div
+                    class="d-flex align-items-center justify-content-center menu menu-dia rounded border border-gold text-white">
+                    <div class="d-block">
+                        <span>CARNES DO</span>
+                        <h2 class="display-2 fw-bold">DIA A DIA</h2>
+                    </div>
+                </div>
+            </a>
+        </div>
+        <div class="col-md-6 col-lg-4 d-flex mt-4 d-flex justify-content-center">
+            <a routerLink="/cardapio">
+                <div
+                    class="d-flex align-items-center justify-content-center menu menu-kits rounded border border-gold text-white">
+                    <div class="d-block">
+                        <span>CONHEÇA NOSSOS</span>
+                        <h2 class="display-2 fw-bold">KITS</h2>
+                    </div>
+                </div>
+            </a>
+        </div>
+        <div class="col-md-6 col-lg-4 d-flex mt-4 d-flex justify-content-center">
             <a routerLink="/cardapio">
                 <div
                     class="d-flex align-items-center justify-content-center menu menu-premium rounded border border-gold text-white">
@@ -46,12 +81,12 @@
         </div>
     </div>
 
-    <div class="d-flex justify-content-center mt-5">
-        <div class="d-block">
+    <div class="d-flex justify-content-center mt-5 ms-5 me-5 ps-5 pe-5">
+        <div class="d-block w-100">
             <a routerLink='/cardapio' routerLinkActive="router-link-active"
-                class="fw-bold btn btn-danger w-100 mt-4">CARDÁPIO COMPLETO</a>
+                class="fw-bold btn btn-danger w-100 mt-4 pt-3 pb-3">CARDÁPIO COMPLETO</a>
             <a target="_blank" href="https://api.whatsapp.com/send?phone=5561999822472"
-                class="fw-bold btn btn-success w-100 mt-4"><i class="fa-brands fa-whatsapp"></i>
+                class="fw-bold btn btn-success w-100 mt-4 pt-3 pb-3"><i class="fa-brands fa-whatsapp"></i>
                 CHAMAR NO WHATSAPP</a>
         </div>
     </div>
@@ -115,12 +150,14 @@
 
 <div class="divider w-100 position-relative pb-5"></div>
 
-<section class="bg-boutique mt-5 mb-5 pt-5 pb-5 d-flex justify-content-center align-items-center">
-    <div class="text-white text-center">
-        <h5>CONHEÇA NOSSOS</h5>
-        <h1 class="display-2 fw-bold">ACESSÓRIOS & <br> BOUTIQUE</h1>
-    </div>
-</section>
+<a routerLink="/acessorios">
+    <section class="bg-boutique mt-5 mb-5 pt-5 pb-5 d-flex justify-content-center align-items-center">
+        <div class="text-white text-center">
+            <h5>CONHEÇA NOSSOS</h5>
+            <h1 class="display-2 fw-bold">ACESSÓRIOS & <br> BOUTIQUE</h1>
+        </div>
+    </section>
+</a>
 
 <div class="divider w-100 position-relative pb-5"></div>
 
@@ -133,10 +170,10 @@
 
 <section id="location" class="container mt-5 mb-5 pb-5 text-white text-center">
     <h1 class="display-2 fw-bold">NOSSAS UNIDADES</h1>
-    <div class="d-flex justify-content-around mt-5">
-        <button (click)="changeLocation('vicente')" class="ps-4 pe-4 btn btn-red text-white fw-bold"
+    <div class="d-flex justify-content-center mt-5 gap-5">
+        <button (click)="changeLocation('vicente')" class="ps-5 pt-3 pb-3 pe-5 btn btn-red text-white fw-bold"
             [ngClass]="location.city=='vicente' ? 'btn-active' : 'btn' ">Vicente Pires</button>
-        <button (click)="changeLocation('Taguatinga')" class="ps-4 pe-4 btn btn-red text-white fw-bold"
+        <button (click)="changeLocation('Taguatinga')" class="ps-5 pt-3 pb-3 pe-5 btn btn-red text-white fw-bold"
             [ngClass]="location.city=='vicente' ? 'btn' : 'btn-active' ">Taguatinga</button>
     </div>
     <div class="map container mt-5">
@@ -170,44 +207,3 @@
         </div>
     </div>
 </section>
-
-<footer class="container mt-5 pt-5 pb-4">
-    <div class="row mb-5 d-flex align-items-center">
-        <div class="col-md-4 d-flex justify-content-center">
-            <img class="img-fluid" src="../assets/logo-header.svg" alt="logo-header.svg">
-        </div>
-        <div class="col-md-4 mt-5 last-cols">
-            <div class="text-gold d-flex justify-content-around">
-                <img width="40" src="../assets/icons/face.svg" alt="face.svg">
-                <a href="https://www.instagram.com/thiagosprime/" target="_blank">
-                    <img width="40" src="../assets/icons/insta.svg" alt="insta.svg">
-                </a>
-                <a href="https://api.whatsapp.com/send?phone=5561999822472" target="_blank">
-                    <img width="40" src="../assets/icons/whats-gold.svg" alt="whats-gold.svg">
-                </a>
-            </div>
-        </div>
-        <div class="col-md-4 mt-5 last-cols">
-            <h5 class="text-center text-white">BAIXE NOSSO APP</h5>
-            <div class="d-flex justify-content-around">
-                <a class="border rounded d-flex align-items-center ps-2 pe-2" target="_blank"
-                    href="https://play.google.com/store/apps/details?id=com.thiagosprime.ccmpedidoonline">
-                    <img width="30" src="../assets/icons/google-play.svg" alt="google-play.svg">
-                    <div class="d-block ms-2 text-white">
-                        <span>DISPONÍVEL NO</span>
-                        <h5>Google Play</h5>
-                    </div>
-                </a>
-                <a class="border rounded d-flex align-items-center ps-2 pe-2" target="_blank"
-                    href="https://apps.apple.com/br/app/thiagos-prime/id1554850657">
-                    <img width="30" src="../assets/icons/app-store.svg" alt="app-store.svg">
-                    <div class="d-block ms-2 text-white">
-                        <span>DISPONÍVEL NA</span>
-                        <h5> &nbsp; App Store &nbsp;</h5>
-                    </div>
-                </a>
-            </div>
-        </div>
-    </div>
-    <h6 class="text-center text-white mt-5 pt-5">&COPY; 2022 QRIA Tech. All Rights Reserved</h6>
-</footer>

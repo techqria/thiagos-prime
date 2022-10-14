@@ -46,6 +46,5 @@ export class MenuComponent implements OnInit {
         this.premiums.push(meat)
       }
     })
-    console.log(this.kits)
   }
 }
