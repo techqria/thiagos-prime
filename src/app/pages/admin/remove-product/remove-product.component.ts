@@ -1,3 +1,4 @@
+import { Target } from '@angular/compiler';
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
@@ -13,7 +14,9 @@ export class RemoveProductComponent implements OnInit {
 
   form: FormGroup;
 
-  products: MeatsDto[]
+  products: MeatsDto[];
+
+  currentProduct: string;
 
   constructor(
     private router: Router,
@@ -38,5 +41,9 @@ export class RemoveProductComponent implements OnInit {
 
   removeProduct() {
 
+  }
+
+  setCurrentProduct(e: Event) {
+    console.log(e)
   }
 }
