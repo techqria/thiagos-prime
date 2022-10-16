@@ -39,7 +39,7 @@ export class RegisterProductComponent implements OnInit {
 
   ngOnInit(): void { }
 
-  registerProduct() {
+  async registerProduct() {
 
     this.validForm = true;
 
@@ -51,7 +51,7 @@ export class RegisterProductComponent implements OnInit {
 
     if (this.validForm) {
 
-      let imagePath = this.apiService.uploadFile(this.image, this.form.value.category)
+      let imagePath = await this.apiService.uploadFile(this.image, this.form.value.category)
 
       this.form.value.image = imagePath;
       this.meat = this.form.value;
