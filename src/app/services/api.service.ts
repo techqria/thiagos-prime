@@ -47,7 +47,7 @@ export class ApiService {
 
     const params = {
       Bucket: environment.bucket,
-      Key: 'kits/' + file.name.trim(),
+      Key: `${category}/` + file.name.trim(),
       Body: file,
       ACL: 'public-read',
       ContentType: file.type
