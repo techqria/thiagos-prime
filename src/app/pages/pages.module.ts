@@ -14,6 +14,7 @@ import { RegisterProductComponent } from './admin/register-product/register-prod
 import { AboutComponent } from './about/about.component';
 import { FooterComponent } from './footer/footer.component';
 import { BoutiqueComponent } from './boutique/boutique.component';
+import { RemoveProductComponent } from './admin/remove-product/remove-product.component';
 
 
 @NgModule({
@@ -29,6 +30,7 @@ import { BoutiqueComponent } from './boutique/boutique.component';
     AboutComponent,
     FooterComponent,
     BoutiqueComponent,
+    RemoveProductComponent,
   ],
   imports: [
     CommonModule,

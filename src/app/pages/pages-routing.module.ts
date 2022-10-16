@@ -3,6 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { AboutComponent } from './about/about.component';
 import { CheckLoginComponent } from './admin/login/check-login/check-login.component';
 import { RegisterProductComponent } from './admin/register-product/register-product.component';
+import { RemoveProductComponent } from './admin/remove-product/remove-product.component';
 import { BoutiqueComponent } from './boutique/boutique.component';
 import { MainComponent } from './main/main.component';
 import { MenuComponent } from './menu/menu.component';
@@ -19,8 +20,9 @@ const pagesRoutes: Routes = [
     ],
 
   },
-  { path: 'admin', component: CheckLoginComponent, },
-  { path: 'admin/novo-produto', component: RegisterProductComponent }
+  { path: 'admin', component: CheckLoginComponent },
+  { path: 'admin/novo-produto', component: RegisterProductComponent },
+  { path: 'admin/remover-produto', component: RemoveProductComponent },
 
 ];
 
