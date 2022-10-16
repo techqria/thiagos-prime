@@ -44,7 +44,7 @@ export class ApiService {
   }
 
   removeMeat(meatId: string) {
-    return this.http.post(`${this.url}/meats/remove-meat/${meatId}`)
+    return this.http.post(`${this.url}/meats/remove-meat/${meatId}`, null)
   }
 
   async uploadFile(file: File, category: string) {
