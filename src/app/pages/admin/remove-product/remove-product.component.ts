@@ -43,7 +43,7 @@ export class RemoveProductComponent implements OnInit {
 
   }
 
-  setCurrentProduct(e: Event) {
-    console.log(e)
+  setCurrentProduct(e: any) {
+    console.log(e.target.value)
   }
 }
