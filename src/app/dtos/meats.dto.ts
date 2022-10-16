@@ -1,5 +1,5 @@
 export class MeatsDto {
-    id: string
+    _id: string
     name: string;
     price: string;
     quantity: string;

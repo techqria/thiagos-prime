@@ -16,7 +16,7 @@ export class RemoveProductComponent implements OnInit {
 
   products: MeatsDto[];
 
-  currentProduct: string;
+  currentProductId: string;
 
   constructor(
     private router: Router,
@@ -38,12 +38,16 @@ export class RemoveProductComponent implements OnInit {
     )
   }
 
-
   removeProduct() {
-
+    this.apiService.removeMeat(this.currentProductId).subscribe(
+      success => {
+        console.log(success)
+      },
+      error => console.log(error)
+    )
   }
 
   setCurrentProduct(e: any) {
-    console.log(e.target.value)
+    this.currentProductId = e.target.value;
   }
 }
