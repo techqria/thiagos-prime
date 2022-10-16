@@ -1,5 +1,5 @@
 <section class="container mt-3 mb-3 d-flex flex-column justify-content-center align-items-center text-white">
-    <form class="form-group" [formGroup]="form" (ngSubmit)="registerProduct()">
+    <form class="form-group" [formGroup]="form" (ngSubmit)="registerProduct()" formenctype="multipart/form-data">
         <h1 class="mb-3 p-0">Cadastrar novo produto</h1>
         <div class="mb-3">
             <label class="form-label">Nome do produto</label>
@@ -28,7 +28,8 @@
         </div>
         <div class="mb-3">
             <label class="form-label">Imagem</label>
-            <input formControlName="image" class="form-control bg-black text-white" type="file">
+            <input (change)="imageChange($event)" id="image" formControlName="image" accept="image/**" class="form-control bg-black text-white" type="file">
+            <img src="" alt="" id="preview">
         </div>
         <div class="mb-3">
             <label class="form-label">Descrição</label>

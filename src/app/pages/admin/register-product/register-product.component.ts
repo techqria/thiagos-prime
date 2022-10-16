@@ -3,6 +3,7 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { MeatsDto } from 'src/app/dtos/meats.dto';
 import { ApiService } from 'src/app/services/api.service';
+import { environment } from 'src/environments/environment';
 
 @Component({
   selector: 'app-register-product',
@@ -16,6 +17,8 @@ export class RegisterProductComponent implements OnInit {
   validForm: boolean = true;
 
   meat: MeatsDto;
+
+  image: File;
 
   constructor(
     private router: Router,
@@ -35,6 +38,7 @@ export class RegisterProductComponent implements OnInit {
   }
 
   ngOnInit(): void {
+    console.log(environment.api)
   }
 
   registerProduct() {
@@ -49,6 +53,8 @@ export class RegisterProductComponent implements OnInit {
 
     if (this.validForm) {
 
+      this.apiService.uploadFile(this.image)
+
       this.meat = this.form.value;
 
       this.apiService.newMeat(this.meat).subscribe(
@@ -60,6 +66,13 @@ export class RegisterProductComponent implements OnInit {
       )
 
     }
+  }
+
+  imageChange(e: Event) {
+    let target = e.target as HTMLInputElement;
+    let files = target.files as FileList;
+
+    this.image = files[0];
   }
 
 }
