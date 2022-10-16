@@ -10,7 +10,6 @@ import { S3Client, PutObjectCommand } from "@aws-sdk/client-s3";
 })
 export class ApiService {
 
-  // url: string = 'https://thiagos-api.herokuapp.com'
   url: string = environment.api
 
   private bucket: S3Client;
@@ -41,17 +40,14 @@ export class ApiService {
   }
 
   newMeat(meat: MeatsDto) {
-    console.log(meat)
     return this.http.post(`${this.url}/meats/newMeat`, meat)
   }
 
-  async uploadFile(file: File) {
+  async uploadFile(file: File, category: string) {
 
-    console.log('upload file:', file)
-    
     const params = {
       Bucket: environment.bucket,
-      Key: 'kits/' + file.name,
+      Key: 'kits/' + file.name.trim(),
       Body: file,
       ACL: 'public-read',
       ContentType: file.type
@@ -60,8 +56,9 @@ export class ApiService {
     try {
       const response = await this.bucket.send(new PutObjectCommand(params));
       console.log("SUCCESS", response);
+      return 'https://thiagos-prime.s3.amazonaws.com/' + 'kits/' + file.name.trim();
     } catch (error) {
-      console.log("FAILURE", error);
+      return error
     }
 
   }

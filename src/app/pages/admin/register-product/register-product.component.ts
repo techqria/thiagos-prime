@@ -37,9 +37,7 @@ export class RegisterProductComponent implements OnInit {
 
   }
 
-  ngOnInit(): void {
-    console.log(environment.api)
-  }
+  ngOnInit(): void { }
 
   registerProduct() {
 
@@ -53,13 +51,13 @@ export class RegisterProductComponent implements OnInit {
 
     if (this.validForm) {
 
-      this.apiService.uploadFile(this.image)
+      let imagePath = this.apiService.uploadFile(this.image, this.form.value.category)
 
+      this.form.value.image = imagePath;
       this.meat = this.form.value;
 
       this.apiService.newMeat(this.meat).subscribe(
         success => {
-          console.log(success)
           this.router.navigate(['/admin'])
         },
         error => console.log(error)
