@@ -3,7 +3,6 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { MeatsDto } from 'src/app/dtos/meats.dto';
 import { ApiService } from 'src/app/services/api.service';
-import { environment } from 'src/environments/environment';
 
 @Component({
   selector: 'app-register-product',

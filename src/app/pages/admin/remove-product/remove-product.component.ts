@@ -42,8 +42,12 @@ export class RemoveProductComponent implements OnInit {
     this.apiService.removeMeat(this.currentProductId).subscribe(
       success => {
         console.log(success)
+        this.router.navigate(['/admin'])
       },
-      error => console.log(error)
+      error => {
+        console.log(error)
+        this.router.navigate(['/admin'])
+      }
     )
   }
 

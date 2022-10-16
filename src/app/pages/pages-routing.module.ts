@@ -1,7 +1,9 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { AuthenticationGuard } from '../guard/authentication.guard';
 import { AboutComponent } from './about/about.component';
-import { CheckLoginComponent } from './admin/login/check-login/check-login.component';
+import { AdminComponent } from './admin/admin/admin.component';
+import { LoginComponent } from './admin/login/login.component';
 import { RegisterProductComponent } from './admin/register-product/register-product.component';
 import { RemoveProductComponent } from './admin/remove-product/remove-product.component';
 import { BoutiqueComponent } from './boutique/boutique.component';
@@ -20,14 +22,15 @@ const pagesRoutes: Routes = [
     ],
 
   },
-  { path: 'admin', component: CheckLoginComponent },
-  { path: 'admin/novo-produto', component: RegisterProductComponent },
-  { path: 'admin/remover-produto', component: RemoveProductComponent },
-
+  { path: 'admin', component: AdminComponent, canActivate: [AuthenticationGuard] },
+  { path: 'admin/novo-produto', component: RegisterProductComponent, canActivate: [AuthenticationGuard] },
+  { path: 'admin/remover-produto', component: RemoveProductComponent, canActivate: [AuthenticationGuard] },
+  { path: 'admin/login', component: LoginComponent },
 ];
 
 @NgModule({
   imports: [RouterModule.forChild(pagesRoutes)],
   exports: [RouterModule]
 })
+
 export class PagesRoutingModule { }
