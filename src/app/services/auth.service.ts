@@ -16,8 +16,11 @@ export class AuthenticationService {
     return localStorage.getItem('user');
   }
 
+  setAuthenticatedUser(): any {
+    return localStorage.setItem('user', 'thiagosprimestorage');
+  }
+
   authenticate(user: UserDto) {
-    console.log(user)
     return this.http.post(`${this.url}/auth/signin`, user);
   }
 }

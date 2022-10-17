@@ -5,4 +5,5 @@ export class MeatsDto {
     quantity: string;
     category: string;
     image: string;
+    description: string | null;
 }

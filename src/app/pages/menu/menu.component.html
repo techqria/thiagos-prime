@@ -27,14 +27,18 @@
     <div class="divider w-100 position-relative"></div>
 
     <div class="row mt-5 d-flex justify-content-center">
-        <div class="col-md-4 mt-5" *ngFor="let kit of kits">
+        <div class="col-md-4 mt-5 mb-5 pb-4" *ngFor="let kit of kits">
             <div class="d-flex flex-column justify-content-center align-items-center">
                 <a href="https://api.whatsapp.com/send?phone=5561999822472" target="_blank"
-                    class="link-meat kits position-relative d-flex flex-column align-items-cente">
+                    class="link-meat kits position-relative d-flex flex-column align-items-center">
                     <img class="img-fluid" [src]="kit.image" alt="kit.png">
-                    <!-- <p class="text-center text-white fs-3 text-capitalize">{{ kit.description }}</p> -->
-                    <p class="text-center text-white fs-3 text-capitalize">{{ kit.name }}</p>
-                    <p class="text-center text-white fw-bold mb-1 ls fs-4 bg-gold">R$ {{ kit.price.length != 2 ? kit.price :
+                    <p class="text-center d-none text-white fs-3 text-capitalize">{{ kit.description }}</p>
+                    <p class="text-center text-white text-capitalize">
+                        <span class="fs-3">{{ kit.name }}</span>
+                        {{kit.quantity}}
+                    </p>
+                    <p class="text-center text-white fw-bold mb-1 ls fs-4 bg-gold w-100">R${{ kit.price.length != 2 ?
+                        kit.price :
                         kit.price + ',00' }}</p>
                     <p class="bg-red m-0 p-0 text-center text-white fs-3 ls w-100 fw-bold">COMPRAR</p>
                 </a>
@@ -50,13 +54,19 @@
     <div class="divider w-100 position-relative"></div>
 
     <div class="row mt-5 d-flex justify-content-center">
-        <div class="col-md-4 mt-5" *ngFor="let premium of premiums">
+        <div class="col-md-4 mt-5 mb-5 pb-4" *ngFor="let premium of premiums">
             <div class="d-flex flex-column justify-content-center align-items-center">
                 <a href="https://api.whatsapp.com/send?phone=5561999822472" target="_blank"
                     class="link-meat position-relative d-flex flex-column align-items-center">
                     <img class="img-fluid" [src]="premium.image" alt="premium.png">
-                    <p class="text-center text-white fs-3 text-capitalize">{{ premium.name }}</p>
-                    <p class="text-center text-white fw-bold mb-1 ls fs-4 bg-gold w-100">R$ {{ premium.price.length != 2 ? premium.price :
+                    <p class="text-center text-white text-capitalize">
+                        <span class="fs-3">
+                            {{ premium.name }}
+                        </span>
+                        {{ premium.quantity }}
+                    </p>
+                    <p class="text-center text-white fw-bold mb-1 ls fs-4 bg-gold w-100">R${{ premium.price.length != 2
+                        ? premium.price :
                         premium.price +
                         ',00' }}</p>
                     <p class="bg-red m-0 p-0 text-center text-white fs-3 ls w-100 fw-bold">COMPRAR</p>
@@ -73,13 +83,19 @@
     <div class="divider w-100 position-relative"></div>
 
     <div class="row mt-5 d-flex justify-content-center">
-        <div class="col-md-4 mt-5" *ngFor="let dia of diadia">
+        <div class="col-md-4 mt-5 mb-5 pb-4" *ngFor="let dia of diadia">
             <div class="d-flex flex-column justify-content-center align-items-center">
                 <a href="https://api.whatsapp.com/send?phone=5561999822472" target="_blank"
                     class="link-meat position-relative d-flex flex-column align-items-cente">
                     <img class="img-fluid" [src]="dia.image" alt="dia-dia.png">
-                    <p class="text-center text-white fs-3 text-capitalize">{{ dia.name }}</p>
-                    <p class="text-center text-white fw-bold mb-1 ls fs-4 bg-gold w-100">R$ {{ dia.price.length != 2 ? dia.price : dia.price + ',00'
+                    <p class="text-center text-white text-capitalize">
+                        <span class="fs-3">
+                            {{ dia.name }}
+                        </span>
+                        {{dia.quantity}}
+                    </p>
+                    <p class="text-center text-white fw-bold mb-1 ls fs-4 bg-gold w-100">R${{ dia.price.length != 2 ?
+                        dia.price : dia.price + ',00'
                         }}</p>
                     <p class="bg-red m-0 p-0 text-center text-white fs-3 ls w-100 fw-bold">COMPRAR</p>
                 </a>
@@ -88,4 +104,3 @@
 
     </div>
 </section>
-
