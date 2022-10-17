@@ -201,8 +201,10 @@ nav {
    &:hover {
     transform: scale(1.1);
 
-    img {
-        opacity: 0.4;
+    &:has(.description) {
+        img {
+            opacity: 0.4;
+        }
     }
 
     .description {
