@@ -47,6 +47,14 @@ export class ApiService {
     return this.http.post(`${this.url}/meats/remove-meat/${meatId}`, null)
   }
 
+  updateMeat(meatId: string, meat: MeatsDto) {
+    return this.http.put(`${this.url}/meats/update-meat/${meatId}`, meat)
+  }
+
+  getMeatById(meatId: string): Observable<MeatsDto> {
+    return this.http.get<MeatsDto>(`${this.url}/meats/get-meat/${meatId}`)
+  }
+
   async uploadFile(file: File, category: string) {
 
     const params = {

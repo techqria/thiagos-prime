@@ -14,6 +14,7 @@ import { FooterComponent } from './footer/footer.component';
 import { BoutiqueComponent } from './boutique/boutique.component';
 import { RemoveProductComponent } from './admin/remove-product/remove-product.component';
 import { LoginComponent } from './admin/login/login.component';
+import { UpdateProductComponent } from './admin/update-product/update-product.component';
 
 @NgModule({
   declarations: [
@@ -28,6 +29,7 @@ import { LoginComponent } from './admin/login/login.component';
     BoutiqueComponent,
     RemoveProductComponent,
     LoginComponent,
+    UpdateProductComponent,
   ],
   imports: [
     CommonModule,
