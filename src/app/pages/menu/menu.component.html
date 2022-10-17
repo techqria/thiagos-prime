@@ -32,14 +32,17 @@
                 <a href="https://api.whatsapp.com/send?phone=5561999822472" target="_blank"
                     class="link-meat kits position-relative d-flex flex-column align-items-center">
                     <img class="img-fluid" [src]="kit.image" alt="kit.png">
-                    <p class="text-center position-absolute d-none text-white description mt-5 text-capitalize">{{ kit.description }}</p>
-                    <p class="text-center text-white text-capitalize">
-                        <span class="fs-3">{{ kit.name }}</span>
+                    <p class="text-center position-absolute d-none text-white description mt-5 text-capitalize">{{
+                        kit.description }}</p>
+                    <p class="text-center text-white text-capitalize fs-3">{{ kit.name }}</p>
+                    <p class="text-center text-white mb-1 ls bg-gold w-100">
+                        <span class="fs-4 fw-bold">
+                            R${{ kit.price.length != 2 ?
+                            kit.price :
+                            kit.price + ',00' }}
+                        </span>
                         {{kit.quantity}}
                     </p>
-                    <p class="text-center text-white fw-bold mb-1 ls fs-4 bg-gold w-100">R${{ kit.price.length != 2 ?
-                        kit.price :
-                        kit.price + ',00' }}</p>
                     <p class="bg-red m-0 p-0 text-center text-white fs-3 ls w-100 fw-bold">COMPRAR</p>
                 </a>
             </div>
@@ -59,16 +62,16 @@
                 <a href="https://api.whatsapp.com/send?phone=5561999822472" target="_blank"
                     class="link-meat position-relative d-flex flex-column align-items-center">
                     <img class="img-fluid" [src]="premium.image" alt="premium.png">
-                    <p class="text-center text-white text-capitalize">
-                        <span class="fs-3">
-                            {{ premium.name }}
+                    <p class="text-center text-white text-capitalize fs-3">{{ premium.name }}</p>
+                    <p class="text-center text-white mb-1 ls bg-gold w-100">
+                        <span class="fs-4 fw-bold">
+                            R${{ premium.price.length != 2
+                            ? premium.price :
+                            premium.price +
+                            ',00' }}
                         </span>
                         {{ premium.quantity }}
                     </p>
-                    <p class="text-center text-white fw-bold mb-1 ls fs-4 bg-gold w-100">R${{ premium.price.length != 2
-                        ? premium.price :
-                        premium.price +
-                        ',00' }}</p>
                     <p class="bg-red m-0 p-0 text-center text-white fs-3 ls w-100 fw-bold">COMPRAR</p>
                 </a>
             </div>
@@ -88,15 +91,14 @@
                 <a href="https://api.whatsapp.com/send?phone=5561999822472" target="_blank"
                     class="link-meat position-relative d-flex flex-column align-items-cente">
                     <img class="img-fluid" [src]="dia.image" alt="dia-dia.png">
-                    <p class="text-center text-white text-capitalize">
-                        <span class="fs-3">
-                            {{ dia.name }}
+                    <p class="text-center text-white text-capitalize fs-3">{{ dia.name }}</p>
+                    <p class="text-center text-white mb-1 ls bg-gold w-100">
+                        <span class="fs-4 fw-bold">
+                            R${{ dia.price.length != 2 ?
+                            dia.price : dia.price + ',00'}}
                         </span>
                         {{dia.quantity}}
                     </p>
-                    <p class="text-center text-white fw-bold mb-1 ls fs-4 bg-gold w-100">R${{ dia.price.length != 2 ?
-                        dia.price : dia.price + ',00'
-                        }}</p>
                     <p class="bg-red m-0 p-0 text-center text-white fs-3 ls w-100 fw-bold">COMPRAR</p>
                 </a>
             </div>
