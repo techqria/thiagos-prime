@@ -38,7 +38,7 @@ export class ApiService {
 
   getAllImages(): Observable<CarouselDto[]> {
     return this.http
-      .get<CarouselDto[]>(`${this.url}/meats/getAllImages`)
+      .get<CarouselDto[]>(`${this.url}/carousel/getAll`)
   }
 
   login() {
@@ -50,7 +50,7 @@ export class ApiService {
   }
 
   newImageCarousel(image: CarouselDto) {
-    return this.http.post(`${this.url}/meats/new-image`, image);
+    return this.http.post(`${this.url}/carousel/new-image`, image);
   }
 
   removeMeat(meatId: string) {
@@ -62,7 +62,7 @@ export class ApiService {
   removeImage(imageId: string) {
 
     this.removeFile(imageId);
-    return this.http.post(`${this.url}/meats/remove-image/${imageId}`, null);
+    return this.http.post(`${this.url}/carousel/remove-image/${imageId}`, null);
   }
 
   updateMeat(meatId: string, meat: MeatsDto) {
