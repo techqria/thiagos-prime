@@ -15,6 +15,8 @@ import { BoutiqueComponent } from './boutique/boutique.component';
 import { RemoveProductComponent } from './admin/remove-product/remove-product.component';
 import { LoginComponent } from './admin/login/login.component';
 import { UpdateProductComponent } from './admin/update-product/update-product.component';
+import { AddImageComponent } from './admin/add-image/add-image.component';
+import { RemoveImageComponent } from './admin/remove-image/remove-image.component';
 
 @NgModule({
   declarations: [
@@ -30,6 +32,8 @@ import { UpdateProductComponent } from './admin/update-product/update-product.co
     RemoveProductComponent,
     LoginComponent,
     UpdateProductComponent,
+    AddImageComponent,
+    RemoveImageComponent,
   ],
   imports: [
     CommonModule,

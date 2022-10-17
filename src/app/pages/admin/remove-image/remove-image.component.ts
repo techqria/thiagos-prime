@@ -1,21 +1,21 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
-import { MeatsDto } from 'src/app/dtos/meats.dto';
+import { CarouselDto } from 'src/app/dtos/carousel.dto';
 import { ApiService } from 'src/app/services/api.service';
 
 @Component({
-  selector: 'app-remove-product',
-  templateUrl: './remove-product.component.html',
-  styleUrls: ['./remove-product.component.scss']
+  selector: 'app-remove-image',
+  templateUrl: './remove-image.component.html',
+  styleUrls: ['./remove-image.component.scss']
 })
-export class RemoveProductComponent implements OnInit {
+export class RemoveImageComponent implements OnInit {
 
   form: FormGroup;
 
-  products: MeatsDto[];
+  imagesCarousel: CarouselDto[];
 
-  currentProductId: string;
+  currentCarouselId: string;
 
   constructor(
     private router: Router,
@@ -24,21 +24,21 @@ export class RemoveProductComponent implements OnInit {
   ) {
 
     this.form = this.formBuilder.group({
-      product: ['', [Validators.required, Validators.minLength(4)]],
+      carouselImage: ['', [Validators.required, Validators.minLength(4)]],
     })
   }
 
   ngOnInit(): void {
-    this.apiService.getAll().subscribe(
+    this.apiService.getAllImages().subscribe(
       success => {
-        this.products = success
+        this.imagesCarousel = success
       },
       error => console.log(error)
     )
   }
 
-  removeProduct() {
-    this.apiService.removeMeat(this.currentProductId).subscribe(
+  removeImage() {
+    this.apiService.removeImage(this.currentCarouselId).subscribe(
       success => {
         console.log(success)
         this.router.navigate(['/admin'])
@@ -51,6 +51,6 @@ export class RemoveProductComponent implements OnInit {
   }
 
   setCurrentProduct(e: any) {
-    this.currentProductId = e.target.value;
+    this.currentCarouselId = e.target.value;
   }
 }
