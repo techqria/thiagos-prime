@@ -17,6 +17,8 @@ import { LoginComponent } from './admin/login/login.component';
 import { UpdateProductComponent } from './admin/update-product/update-product.component';
 import { AddImageComponent } from './admin/add-image/add-image.component';
 import { RemoveImageComponent } from './admin/remove-image/remove-image.component';
+import { CarouselComponent } from './carousel/carousel.component';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 @NgModule({
   declarations: [
@@ -34,8 +36,10 @@ import { RemoveImageComponent } from './admin/remove-image/remove-image.componen
     UpdateProductComponent,
     AddImageComponent,
     RemoveImageComponent,
+    CarouselComponent,
   ],
   imports: [
+    NgbModule,
     CommonModule,
     PagesRoutingModule,
     FormsModule,

@@ -86,7 +86,7 @@ export class ApiService {
     try {
       const response = await this.bucket.send(new PutObjectCommand(params));
       console.log("SUCCESS", response);
-      return 'https://thiagos-prime.s3.amazonaws.com/' + 'kits/' + file.name.trim();
+      return 'https://thiagos-prime.s3.amazonaws.com/' + `${category}/` + file.name.trim();
     } catch (error) {
       return error
     }

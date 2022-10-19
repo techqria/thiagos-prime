@@ -14,6 +14,8 @@ export class AddImageComponent implements OnInit {
   form: FormGroup;
   validForm: boolean = true;
 
+  http: string = "https://";
+
   image: File;
 
   carouselImages: CarouselDto;
@@ -25,6 +27,8 @@ export class AddImageComponent implements OnInit {
     ) { 
       this.form = this.formBuilder.group({
         image: ['', [Validators.required]],
+        text: ['', [Validators.required, Validators.minLength(10)]],
+        link: ['https://', [Validators.required, Validators.minLength(6)]],
       })
     }
 

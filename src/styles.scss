@@ -194,6 +194,10 @@ nav {
     letter-spacing: 2px;
 }
 
+.mh-600 {
+    max-height: 600px !important;
+}
+
 .link-meat {
 
     img {
@@ -351,10 +355,17 @@ nav {
     }
 }
 
+.text-carousel {
+    z-index: 3;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
 @media (min-width: 500px) {
 
     .logo-rounded-header {
-        bottom: -170px;
+        bottom: -40px;
     }
 
     .bg-header {

@@ -3,10 +3,22 @@
         <h1 class="mb-3 p-0">Adicionar nova imagem</h1>
         <div class="mb-3">
             <label class="form-label">Imagem</label>
-            <input (change)="imageChange($event)" id="image" formControlName="image" accept="image/**" class="form-control bg-black text-white" type="file">
+            <input (change)="imageChange($event)" id="image" formControlName="image" accept="image/**"
+                class="form-control bg-black text-white" type="file">
             <img src="" alt="" id="preview">
         </div>
+        <div class="mb-3">
+            <label class="form-label">Link externo</label>
+            <p class="text-danger"> * caso a tag <span class="fw-bold">HTTPS://</span> seja removida, não funcionará corretamente</p>
+            <input formControlName="link" type="text" class="form-control text-white bg-black"
+                placeholder="Ex: https://instagram.com/thiagosprime/promos" />
 
+        </div>
+        <div class="mb-3">
+            <label class="form-label">Texto</label>
+            <textarea formControlName="text" class="form-control text-white bg-black"
+                placeholder="Ex: Venha conhecer o melhor boutique de carnes do Brasil" cols="30" rows="5"></textarea>
+        </div>
         <button class="btn btn-outline-gold text-white form-control" type="submit">CADASTRAR IMAGEM</button>
     </form>
 </section>

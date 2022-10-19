@@ -1,10 +1,20 @@
-<section class="bg-header position-relative pb-5 pt-5 mb-5" id="header">
-    <div class="pb-5 pt-5 d-flex justify-content-center mb-2">
-        <div class="text-header text-center pt-5 pb-5">
-            <h4 class="text-white m-0 fw-bold pt-5">A MAIOR VARIEDADE DE</h4>
-            <h1 class="text-white m-0 display-3 fw-bold">ANGUS E NELORE DO DF</h1>
-            <h4 class="text-gold m-0 fw-bold pb-5">TUDO PARA SEU CHURRASCO E SEU DIA A DIA!</h4>
-        </div>
+<section class="position-relative pb-5 mb-5" id="header">
+    <div class="pb-5 d-flex justify-content-center mb-2">
+        <ngb-carousel class="w-100 position-relative" *ngIf="carouselImages"
+            [showNavigationArrows]="showNavigationArrows" [showNavigationIndicators]="showNavigationIndicators">
+            <ng-template ngbSlide *ngFor="let image of carouselImages">
+                <div class="picsum-img-wrapper">
+                    <a [href]="image.link" target="_blank">
+                        <img class="w-100 mh-600" [src]="image.image" alt="carousel-image.png" />
+                    </a>
+                </div>
+                <div class="position-absolute text-white text-carousel">
+                    <a [href]="image.link" target="_blank">
+                        <h2 class="text-white text-center m-0 fw-bold pt-5 text-uppercase">{{image.text}}</h2>
+                    </a>
+                </div>
+            </ng-template>
+        </ngb-carousel>
         <img class="logo-rounded-header position-absolute" src="../assets/logo-main.svg" alt="thiagos-logo.svg">
     </div>
 </section>
@@ -115,7 +125,7 @@
                     </div>
                     <div class="pt-5 pb-5 w-50 d-block border-red">
                         <img width="40" src="../assets/icons/delivery-box.svg" alt="delivery-box.svg">
-                        <p>ENTREGAS EM TODO <br> DF</p>
+                        <p class="text-uppercase">Fazemos entrega, Consulte localidades</p>
                     </div>
                 </div>
             </div>

@@ -2,11 +2,16 @@
     <form class="form-group" [formGroup]="form" (ngSubmit)="updateProduct()" formenctype="multipart/form-data">
         <h1 class="mb-3 p-0">Alterar produto</h1>
         <div class="mb-3">
-            <label class="form-label">Nome do produto</label>
+            <label class="form-label">Selecionar produto</label>
             <select class="form-select text-white bg-black" 
                 (change)="setCurrentProduct($event)">
                 <option *ngFor="let product of products" value={{product._id}}>{{product.name}}</option>
             </select>
+        </div>
+        <div class="mb-3">
+            <label class="form-label">Nome</label>
+            <input [value]="currentProduct?.name" formControlName="name" type="text"
+                class="form-control text-white bg-black">
         </div>
         <div class="mb-3">
             <label class="form-label">Preço</label>

@@ -1,9 +1,33 @@
 <section class="container pt-5 pb-5 d-flex flex-column gap-5 justify-content-center align-items-center">
-    <!-- <img class="mb-4 mt-4 img-fluid" src="../assets/logo-header.svg" alt="logo-header.svg"> -->
-    <a [routerLink]="['/admin/novo-produto']" class="btn btn-outline-gold text-white">ADICIONAR PRODUTO</a>
-    <a [routerLink]="['/admin/alterar-produto']" class="btn btn-outline-gold text-white">ALTERAR PRODUTO</a>
-    <a [routerLink]="['/admin/remover-produto']" class="btn btn-outline-gold text-white">REMOVER PRODUTO</a>
-    <a [routerLink]="['/admin/nova-imagem']" class="btn btn-outline-gold text-white">ADICIONAR IMAGEM DO CARROSEL</a>
-    <a [routerLink]="['/admin/remover-imagem']" class="btn btn-outline-gold text-white">REMOVER IMAGEM DO CARROSEL</a>
+    <img class="mb-4 mt-4 img-fluid" src="../assets/logo-header.svg" alt="logo-header.svg">
+
+    <div class="row d-flex justify-content-around  w-100">
+        <div class="col-md-4 mt-5 d-flex justify-content-center">
+            <a [routerLink]="['/admin/novo-produto']" class="p-5 fw-bold fs-5 btn btn-outline-gold text-white">
+                ADICIONAR PRODUTO
+            </a>
+        </div>
+        <div class="col-md-4 mt-5 d-flex justify-content-center">
+            <a [routerLink]="['/admin/alterar-produto']" class="p-5 fw-bold fs-5 btn btn-outline-gold text-white">
+                ALTERAR PRODUTO
+            </a>
+        </div>
+        <div class="col-md-4 mt-5 d-flex justify-content-center">
+            <a [routerLink]="['/admin/remover-produto']" class="p-5 fw-bold fs-5 btn btn-outline-gold text-white">
+                REMOVER PRODUTO
+            </a>
+        </div>
+        <div class="col-md-4 mt-5 d-flex justify-content-center">
+            <a [routerLink]="['/admin/nova-imagem']" class="p-5 fw-bold fs-5 btn btn-outline-gold text-white">
+                ADICIONAR IMAGEM DO CARROSEL
+            </a>
+        </div>
+        
+        <div class="col-md-4 mt-5 d-flex justify-content-center">
+            <a [routerLink]="['/admin/remover-imagem']" class="p-5 fw-bold fs-5 btn btn-outline-gold text-white">
+                REMOVER IMAGEM DO CARROSEL
+            </a>
+        </div>
+    </div>
 </section>
 <router-outlet></router-outlet>

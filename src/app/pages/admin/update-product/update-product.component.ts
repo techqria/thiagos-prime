@@ -27,6 +27,7 @@ export class UpdateProductComponent implements OnInit {
   ) {
 
     this.form = this.formBuilder.group({
+      name: ['', [Validators.required, Validators.minLength(4), Validators.maxLength(25)]],
       price: ['', [Validators.required, Validators.minLength(2), Validators.maxLength(6)]],
       description: ['', [Validators.required, Validators.minLength(10), Validators.maxLength(50)]],
       quantity: ['', [Validators.required]],
