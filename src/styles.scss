@@ -70,9 +70,7 @@ a {
 .kits {
     transition: .4s ease;
 
-    &:hover {
-
-    }
+    &:hover {}
 }
 
 .whats {
@@ -206,19 +204,19 @@ nav {
 
     transition: .4s ease;
 
-   &:hover {
-    transform: scale(1.1);
+    &:hover {
+        transform: scale(1.1);
 
-    &:has(.description) {
-        img {
-            opacity: 0.4;
+        &:has(.description) {
+            img {
+                opacity: 0.4;
+            }
+        }
+
+        .description {
+            display: block !important;
         }
     }
-
-    .description {
-        display: block !important;
-    }
-   }
 }
 
 .app span {
@@ -303,6 +301,19 @@ nav {
 .right-40 {
     right: 40px;
 }
+
+.row-boutique {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0 4px;
+
+        .column-boutique img {
+            margin-top: 8px;
+            vertical-align: middle;
+    }
+
+}
+
 
 @keyframes myModal {
 
