@@ -28,7 +28,7 @@ export class AddImageComponent implements OnInit {
       this.form = this.formBuilder.group({
         image: ['', [Validators.required]],
         text: ['', [Validators.required, Validators.minLength(10)]],
-        link: ['https://', [Validators.required, Validators.minLength(6)]],
+        link: [this.http, [Validators.required, Validators.minLength(6)]],
       })
     }
 

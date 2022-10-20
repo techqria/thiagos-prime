@@ -1,5 +1,5 @@
-<section class="position-relative pb-5 mb-5" id="header">
-    <div class="pb-5 d-flex justify-content-center mb-2">
+<section class="position-relative pb-md-5 pb-2 mb-md-5 mb-2 d-flex flex-column align-items-center" id="header">
+    <div class="pb-md-5 pb-2 d-flex justify-content-center w-100 mb-2">
         <ngb-carousel class="w-100 position-relative" *ngIf="carouselImages"
             [showNavigationArrows]="showNavigationArrows" [showNavigationIndicators]="showNavigationIndicators">
             <ng-template ngbSlide *ngFor="let image of carouselImages">
@@ -8,18 +8,19 @@
                         <img class="w-100 mh-600" [src]="image.image" alt="carousel-image.png" />
                     </a>
                 </div>
-                <div class="position-absolute text-white text-carousel">
+                <div class="position-absolute text-white text-carousel pt-md-0 pb-md-0 pt-5 pb-5">
                     <a [href]="image.link" target="_blank">
-                        <h2 class="text-white text-center m-0 fw-bold pt-5 text-uppercase">{{image.text}}</h2>
+                        <h2 class="text-white text-center m-0 fw-bold pt-5 text-uppercase pb-5 pb-md-0">{{image.text}}</h2>
                     </a>
                 </div>
             </ng-template>
         </ngb-carousel>
-        <img class="logo-rounded-header position-absolute" src="../assets/logo-main.svg" alt="thiagos-logo.svg">
+        <img class="logo-rounded-header d-none d-md-block position-absolute" src="../assets/logo-main.svg" alt="thiagos-logo.svg">
     </div>
+    <img class="img-fluid d-block d-md-none" src="../assets/logo-header.svg" alt="logo-header.svg">
 </section>
 
-<section class="container mt-5 mb-5 pt-5 pb-5">
+<section class="container mt-md-5 mt-2 mb-5 pt-md-5 pt-2 pb-5">
     <div class="text-center d-none fw-bold d-md-flex flex-row justify-content-center gap-5">
         <div class="d-flex mt-4 d-flex justify-content-center">
             <a routerLink="/cardapio">
