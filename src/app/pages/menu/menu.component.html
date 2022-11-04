@@ -63,12 +63,6 @@
                     <img class="img-fluid" [src]="premium.image" alt="premium.png">
                     <p class="text-center text-white text-capitalize fs-3">{{ premium.name }}</p>
                     <p class="text-center text-white mb-1 ls bg-gold w-100">
-                        <span class="fs-4 fw-bold">
-                            R${{ premium.price.length != 2
-                            ? premium.price :
-                            premium.price +
-                            ',00' }}
-                        </span>
                         {{ premium.quantity }}
                     </p>
                     <p class="bg-red m-0 p-0 text-center text-white fs-3 ls w-100 fw-bold">COMPRAR</p>
@@ -92,10 +86,6 @@
                     <img class="img-fluid" [src]="dia.image" alt="dia-dia.png">
                     <p class="text-center text-white text-capitalize fs-3">{{ dia.name }}</p>
                     <p class="text-center text-white mb-1 ls bg-gold w-100">
-                        <span class="fs-4 fw-bold">
-                            R${{ dia.price.length != 2 ?
-                            dia.price : dia.price + ',00'}}
-                        </span>
                         {{dia.quantity}}
                     </p>
                     <p class="bg-red m-0 p-0 text-center text-white fs-3 ls w-100 fw-bold">COMPRAR</p>
